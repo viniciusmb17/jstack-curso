@@ -25,3 +25,4 @@ yarn-error.log*
 
 #VScode
 code-workspace
+.vscode/settings.json
