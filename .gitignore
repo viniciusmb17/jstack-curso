@@ -28,3 +28,4 @@ yarn-error.log*
 code-workspace
 .vscode/settings.json
 *.code-workspace
+jstack.code-workspace
