@@ -3,6 +3,7 @@
 # dependencies
 /node_modules
 node_modules/
+mycontacts/node_modules/
 /docs/node_modules
 /.pnp
 .pnp.js
@@ -29,3 +30,4 @@ code-workspace
 .vscode/settings.json
 *.code-workspace
 jstack.code-workspace
+
