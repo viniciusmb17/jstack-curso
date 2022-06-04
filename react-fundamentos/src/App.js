@@ -11,20 +11,25 @@ function App() {
       <hr />
 
       <Post
-        title="Título da notícia 01"
-        subtitle="Subtítulo da notícia"
+        likes={20}
+        post={{
+          title: "Título da notícia 01",
+          subtitle: "Subtítulo da notícia"
+        }}
       />
       <Post
-        title="Título da notícia 02"
-        subtitle="Subtítulo da notícia"
+        likes={10}
+        post={{
+          title:"Título da notícia 02",
+          subtitle:"Subtítulo da notícia"
+        }}
       />
       <Post
-        title="Título da notícia 03"
-        subtitle="Subtítulo da notícia"
-      />
-      <Post
-        title="Título da notícia 04"
-        subtitle="Subtítulo da notícia"
+        likes={50}
+        post={{
+          title:"Título da notícia 03",
+          subtitle:"Subtítulo da notícia"
+        }}
       />
 
     </>
