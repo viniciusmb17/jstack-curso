@@ -25,6 +25,7 @@ module.exports = {
     camelcase: 'off',
     'no-unused-vars': ['error', { argsIgnorePattern: 'next' }],
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
-    'react/button-has-type': false,
+    'react/button-has-type': 'off',
+    'react/jsx-no-bind': 'off',
   },
 };
