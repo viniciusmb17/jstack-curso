@@ -1,27 +1,19 @@
-/* eslint-disable react/button-has-type */
-/* eslint-disable react/destructuring-assignment */
 import React from 'react';
 import PropTypes from 'prop-types';
+import PostHeader from './PostHeader';
 
 export default function Post(props) {
-  if (props.post.read) {
-    return (
-      <h2>
-        {props.post.title}
-        {' '}
-        já foi lido.
-      </h2>
-    );
-  }
-
   return (
     <>
       <article>
-        <strong>
-          {props.post.read ? <s>{props.post.title}</s> : props.post.title}
-          ;
-        </strong>
-        <button onClick={() => props.onRemove(props.post.id)}>Remover</button>
+        <PostHeader
+          onRemove={props.onRemove}
+          post={{
+            id: props.post.id,
+            title: props.post.title,
+            read: props.post.read,
+          }}
+        />
         <br />
         <small>{props.post.subtitle}</small>
         <br />

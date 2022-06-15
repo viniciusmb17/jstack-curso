@@ -27,5 +27,8 @@ module.exports = {
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     'react/button-has-type': 'off',
     'react/jsx-no-bind': 'off',
+    'react/destructuring-assignment': 'off',
+    'import/no-cycle': 'off',
+    'react/jsx-no-constructed-context-values': 'off',
   },
 };
