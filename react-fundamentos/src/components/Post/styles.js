@@ -1,10 +1,12 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Container = styled.article`
   margin-bottom: 24px;
 
-
-  opacity: ${(props) => (props.removed ? 0.5 : 1)};
+  ${({ removed }) => css`
+    color: ${removed ? 'red' : 'white'};
+    opacity: ${removed ? 0.5 : 1};
+  `}
 
 `;
 
