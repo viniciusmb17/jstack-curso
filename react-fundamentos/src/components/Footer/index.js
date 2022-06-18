@@ -1,16 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
+import { ThemeContext } from 'styled-components';
 import { Container } from './sytles';
 
-export default function Footer({ onToggleTheme, selectedTheme }) {
+export default function Footer() {
+  const context = useContext(ThemeContext);
+
   return (
     <Container>
       <span>JStack's Blog. Todos os direitos reservados.</span>
       <button
         type="button"
-        onClick={onToggleTheme}
+        onClick={context.handleToggleTheme}
       >
-        {selectedTheme === 'dark' ? '🌞' : '🌚'}
+        {context.theme === 'dark' ? '🌞' : '🌚'}
       </button>
     </Container>
   );

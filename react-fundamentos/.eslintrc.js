@@ -31,5 +31,6 @@ module.exports = {
     'import/no-cycle': 'off',
     'react/jsx-no-constructed-context-values': 'off',
     'import/prefer-default-export': 'off',
+    'react/no-unescaped-entities': 'off',
   },
 };

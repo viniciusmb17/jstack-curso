@@ -1,18 +1,20 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Container = styled.article`
-  background: ${({ theme }) => theme.postBackgroundColor};
+  ${({ theme }) => css`
+    background: ${theme.currentTheme.postBackgroundColor};
+    border-radius: ${theme.currentTheme.borderRadius};
+    padding: ${`${theme.currentTheme.spacing.medium}px`};
+    h2 {
+      margin: 0 0 ${`${theme.currentTheme.spacing.small}px`};
+    }
+    & + article {
+      margin-top: ${`${theme.currentTheme.spacing.small}px`};
+    }
+  `};
   display: flex;
   flex-direction: column;
-  padding: 16px;
-  border-radius: 10px;
-  h2 {
-    margin: 0 0 8px;
-  }
   small {
     opacity: 0.7;
-  }
-  & + article {
-    margin-top: 8px;
   }
 `;
