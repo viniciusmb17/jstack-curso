@@ -6,24 +6,6 @@ import Layout from './components/Layout';
 
 import themes from './styles/themes';
 
-function App() {
-  const [theme, setTheme] = useLocalState('dark');
-
-  const currentTheme = useMemo(() => themes[theme] || themes.dark, [theme]);
-
-  function handleToggleTheme() {
-    setTheme((prevState) => (prevState === 'dark' ? 'light' : 'dark'));
-  }
-  return (
-    <ThemeProvider theme={{ currentTheme, handleToggleTheme, theme }}>
-      <GlobalStyle />
-      <Layout />
-    </ThemeProvider>
-  );
-}
-
-export default App;
-
 function useLocalState(key, initialValue = '') {
   const [state, setState] = useState(() => {
     const storedData = localStorage.getItem(key);
@@ -45,3 +27,21 @@ function useLocalState(key, initialValue = '') {
   // Deixamos o state e o setState acessíveis para quem for usar este hook...
   return [state, setState];
 }
+
+function App() {
+  const [theme, setTheme] = useLocalState('dark');
+
+  const currentTheme = useMemo(() => themes[theme] || themes.dark, [theme]);
+
+  function handleToggleTheme() {
+    setTheme((prevState) => (prevState === 'dark' ? 'light' : 'dark'));
+  }
+  return (
+    <ThemeProvider theme={{ currentTheme, handleToggleTheme, theme }}>
+      <GlobalStyle />
+      <Layout />
+    </ThemeProvider>
+  );
+}
+
+export default App;
